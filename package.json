@@ -1,0 +1,14 @@
+{
+  "name": "project5-irvin-luna",
+  "version": "1.0.0",
+  "description": "Multi-user Babylon.js GLB model viewer for CS 310 Project 5",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "ws": "^8.18.0"
+  }
+}

@@ -1,0 +1,29 @@
+/* Project 5 - Created by Irvin Luna */
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; font-family: Arial, Helvetica, sans-serif; background: #101827; color: #f4f7fb; }
+body { display: flex; flex-direction: column; min-height: 100vh; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px 22px; background: #18263a; border-bottom: 1px solid #34445c; }
+h1 { margin: 0 0 5px; font-size: 1.35rem; }
+.topbar p { margin: 0; color: #b9c7d9; font-size: .9rem; }
+.connection-panel { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.status, .role { font-size: .85rem; padding: 5px 10px; border-radius: 20px; background: #334155; }
+.role.host { background: #14532d; color: #dcfce7; }
+.role.spectator { background: #1e40af; color: #dbeafe; }
+main { display: flex; flex: 1; flex-direction: column; min-height: 0; }
+.toolbar { padding: 12px 18px; background: #f8fafc; color: #172033; }
+.host-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+.host-controls[hidden], .spectator-message[hidden] { display: none; }
+label { font-weight: 700; font-size: .9rem; }
+input[type="file"], select, button { font: inherit; }
+input[type="file"], select { max-width: 260px; padding: 7px; border: 1px solid #aab6c5; border-radius: 5px; background: white; color: #172033; }
+button { padding: 8px 12px; border: 0; border-radius: 5px; color: white; background: #1d4ed8; cursor: pointer; }
+button:hover { background: #1e40af; }
+button:disabled { opacity: .55; cursor: wait; }
+.or-label { color: #64748b; font-size: .85rem; }
+.spectator-message, .app-message { margin: 4px 0; font-size: .9rem; }
+.spectator-message { color: #1e40af; }
+.app-message { color: #475569; }
+.viewer-wrap { position: relative; flex: 1; min-height: 420px; }
+#renderCanvas { display: block; width: 100%; height: calc(100vh - 155px); min-height: 420px; touch-action: none; outline: none; }
+.camera-help { position: absolute; left: 12px; bottom: 12px; padding: 7px 10px; border-radius: 5px; color: #e2e8f0; background: rgba(15, 23, 42, .78); font-size: .78rem; pointer-events: none; }
+@media (max-width: 700px) { .topbar { align-items: flex-start; flex-direction: column; } .connection-panel { align-items: flex-start; } #renderCanvas { height: 65vh; } }

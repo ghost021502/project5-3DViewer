@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Created by Irvin Luna -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irvin Luna | Multi-User Babylon.js Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div>
+            <h1>Multi-User 3D Model Viewer</h1>
+            <p>Project 5 · Irvin Luna</p>
+        </div>
+        <div class="connection-panel">
+            <span id="connectionStatus" class="status">Connecting…</span>
+            <span id="roleStatus" class="role">Waiting for role</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="toolbar" aria-label="Model controls">
+            <div id="hostControls" class="host-controls" hidden>
+                <label for="glbFileInput">Upload a GLB model</label>
+                <input type="file" id="glbFileInput" accept=".glb,model/gltf-binary">
+                <button id="uploadButton" type="button">Upload and add model</button>
+                <span class="or-label">or</span>
+                <label for="exampleModels">Choose an example</label>
+                <select id="exampleModels">
+                    <option value="">Loading examples…</option>
+                </select>
+                <button id="loadExampleButton" type="button">Add example</button>
+            </div>
+            <p id="spectatorMessage" class="spectator-message" hidden>
+                You are viewing as a Spectator. The Host controls which models are added. You can still move your own camera.
+            </p>
+            <p id="appMessage" class="app-message">Connect to the server to begin.</p>
+        </section>
+
+        <section class="viewer-wrap">
+            <canvas id="renderCanvas" aria-label="Interactive 3D model viewer"></canvas>
+            <div class="camera-help">Mouse: rotate · Wheel: zoom · Right-click drag: pan</div>
+        </section>
+    </main>
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
